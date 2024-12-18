@@ -41,39 +41,7 @@ public class GameSaveManagerTest {
         String output = outputStream.toString();
         assertTrue(output.contains("Game saved successfully."), "Console output should contain success message");
     }
-/*
-    @Test
-public void testLoadGame_NoSaveFile() {
-    // Capture console output
-    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-    System.setOut(new PrintStream(outputStream));
 
-    // Create mock game board
-    String[][] board = new String[3][3];
-
-    // Create a mock GameLogic object
-        GameLogic gameLogic = new GameLogic() {
-            @Override
-            public void setPlayerNext(boolean isPlayerNext) {
-                // Szimuláld a GameLogic viselkedését:
-                // Például nyomtasd ki a paraméter értékét a konzolra
-                System.out.println("Player's turn: " + isPlayerNext);
-            }
-        };
-
-    // Create a GameSaveManager instance
-    GameSaveManager gameSaveManager = new GameSaveManager();
-
-    // Call loadGame simulating no save file
-    boolean loaded = gameSaveManager.loadGame(board, gameLogic);
-
-    // Assert game not loaded and console output reflects that
-    String output = outputStream.toString();
-    assertFalse(loaded, "Game should not be loaded");
-    assertTrue(output.contains("No saved game found. Starting a new game."),
-               "Console output should indicate missing save file: " + output);
-}
-*/
     @Test
     public void testDeleteSave_NoFile() {
         // Capture console output
